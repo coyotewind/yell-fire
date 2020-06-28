@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Yell Fire! | Ring The Alarm & Let Freedom Reign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="wing.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/5229213cc6.js" crossorigin="anonymous"></script>
+    <script defer src="app.js"></script>
+    <script type="text/javascript">
+        jQuery(document).scroll(function() { // toggles classes for scropt to top
+            jQuery('#goto').toggleClass('view', jQuery(this).scrollTop() > 100);
+        });
+        jQuery(function() { // smooth scrolling for anchor links
+            jQuery('a[href*=\\#]:not([href=\\#])').click(function() {
+                let fromTop = 212;
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    let target = jQuery(this.hash);
+                    target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        jQuery('html,body').animate({ scrollTop: target.offset().top - fromTop  }, 800); 
+                        return false; 
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="serif">
+    <div id="app">
+
+        <section id="search_bar">
+            <div class="container full">
+                <form id="search" class="row">
+                    <fieldset class="col">
+                        <label for="keywords">Keywords</label>
+                        <input id="input-keywords" type="text" placeholder="Enter Keyword">
+                    </fieldset>
+                    <fieldset class="col">
+                        <label for="start-date">Start Date</label>
+                        <input type="text" id="date-start" placeholder="Start Date" onfocus="(this.type='date')">
+                    </fieldset>
+                    <fieldset class="col">
+                        <label for="end-date">End Date</label>
+                        <input type="text" id="date-end" placeholder="End Date" onfocus="(this.type='date')">
+                    </fieldset>
+                    <div class="divider"></div>
+                    <fieldset class="col">
+                        <label for="category">Category</label>
+                        <select name="category" id="select-category">
+                            <option class="category-count" value=""></option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="col">
+                        <label for="language">Language</label>
+                        <select name="language" id="select-language">
+                            <option class="language-count" value=""></option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="col">
+                        <label for="region">Region</label>
+                        <select name="region" id="select-region">
+                            <option class="region-count" value=""></option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="col">
+                        <label for="keywords">&nbsp;</label>
+                        <button>Search</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <section id="all">
+            <section id="header">
+                <div class="container">
+
+                    <div id="logo" class="row end">
+                        <h6 class="date screen col-2 sans bold small"></h6>
+                        <div class="masthead col-8">
+                            <header>
+                                <a class="no-style" href="/">
+                                    <h1 class="full center semi">Yell Fire!</h1>
+                                    <h5 class="full center book italic">Ring the alarm & let freedom reign</h5>
+                                </a>
+                            </header>    
+                        </div>
+                        <h6 class="date mobile col-2 sans bold small"></h6>
+                        <h6 class="locale col-2 sans book small right">
+                            <span><strong>Edition:&nbsp;&nbsp;</strong></span>
+                            <a class="edition active" href="#" data-pref="US">US</a>
+                            <div class="separator">|</div>
+                            <a class="edition" href="#" data-pref="INT">World</a>
+                        </h6>
+                    </div>
+
+                    <div id="nav" class="row">
+                        <nav class="nav sans">
+                            <a class="nav-item tag" href="#" data-category="general">All The News</a>
+                            <a class="nav-item tag" href="#" data-category="world">World</a>
+                            <a class="nav-item tag" href="#" data-category="politics">Politics</a>
+                            <a class="nav-item tag" href="#" data-category="business">Business</a>
+                            <a class="nav-item tag" href="#" data-category="technology">Technology</a>
+                            <a class="nav-item tag" href="#" data-category="economy">Economy</a>
+                            <a class="nav-item tag" href="#" data-category="science">Science</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+
+            <section id="content">
+                <div class="container">    
+                    <div class="row">
+
+                        <main id="view" class="col-9">
+                            <section id="paginate" class="sans">
+                                <button class="older">Older Articles</button>
+                                <button class="newer">Newer Articles</button>
+                            </section>
+                            <section id="results"></section>
+                        </main>
+                        
+                        <aside id="sidebar" class="col-3">
+                            <section id="sponsors">
+                                <div class="row">
+                                    <a target="_blank" href="https://democracynow.org" class="col">
+                                        <img class="flex" src="images/democracy.png" alt="Democracy Now" />
+                                    </a>
+                                    <a target="_blank" href="https://berniesanders.com" class="col">
+                                        <img class="flex" src="images/feel_the_bern.jpg" alt="Bernie Sanders" />
+                                    </a>
+                                    <a target="_blank" href="voanews.com" class="col">
+                                        <img class="flex" src="images/voa.jpg" alt="Voice Of America" />
+                                    </a>
+                                </div>
+                            </section>
+                        </aside>
+
+                    </div>
+                </div>
+            </section>
+
+            <footer id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 center">Yell Fire! &copy; 2020 All Rights Reserved</div>
+                    </div>
+                </div>
+                <div id="goto" class="view">
+                    <a href="#all">
+                        <span class="fa fa-icon fa-chevron-up" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </footer>
+        
+        </section>
+    </div>
+
+</body>
+</html>
+
