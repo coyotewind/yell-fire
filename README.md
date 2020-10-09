@@ -7,8 +7,9 @@
 
 ### What I Learned:
 
-- How to use multiple end-points to populate a website with dats
-- How to create a feed of data that can be searched in real time
+- How to use multiple end-points to populate a website with data.
+- How to create a feed of data that can be searched in real time.ject.
+- Using more complex functions and methods like map, Object.entries and Promise.all.
 - Our first exploration of using a CSS framework. I used Wing.css for this one.
 
 ### What I am Proud Of:
