@@ -3,6 +3,7 @@
 ### Description
 
 - Using the Currents API to build a fully fucntioning news website.
+- The design is heavily inspired by the Washington Post
 - It can be seen at https://yell-fire.netlify.app/
 
 ### What I Learned:
